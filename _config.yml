@@ -1,0 +1,33 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               MidiWriterJS
+tagline:             Expressive multi-track MIDI generator written in JavaScript
+url:                 
+paginate:            1
+baseurl:             "/"
+description:		JavaScript library providing an API for generating expressive multi-track MIDI files in browser and Node.
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
+
+# Custom vars
+version:             1.2.0
+github:
+  repo:              https://github.com/grimmdude/MidiWriterJS
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
