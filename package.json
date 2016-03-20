@@ -1,0 +1,23 @@
+{
+  "name": "midi-writer-js-gh-pages",
+  "version": "1.0.0",
+  "description": "Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grimmdude/MidiWriterJS.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grimmdude/MidiWriterJS/issues"
+  },
+  "homepage": "https://github.com/grimmdude/MidiWriterJS#readme",
+  "dependencies": {
+    "ace": "0.0.2",
+    "midi-writer-js": "^1.2.0"
+  }
+}

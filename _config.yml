@@ -6,7 +6,7 @@ title:               MidiWriterJS
 tagline:             Expressive multi-track MIDI generator written in JavaScript
 url:                 
 paginate:            1
-baseurl:             "/"
+baseurl:             ""
 description:		JavaScript library providing an API for generating expressive multi-track MIDI files in browser and Node.
 
 # Assets
