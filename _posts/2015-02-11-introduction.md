@@ -29,9 +29,9 @@ console.log('data:audio/midi;base64,' + write.base64());
 	<a class="button" href="javascript:;" onclick="document.getElementById('midi-check').style.visibility='hidden';eval(editor.getValue());">Run</a>
 	<a href="javascript:;" class="button" id="download-midi">Download Midi</a> <span id="midi-check" style="visibility:hidden;">&#10003;</span>
 </p>
-<script src="/public/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="/public/js/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
-<script src="/public/js/midi-writer-js.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ site.github.url }}/public/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ site.github.url }}/public/js/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ site.github.url }}/public/js/midi-writer-js.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
     var editor = ace.edit("editor");
