@@ -10,7 +10,7 @@ npm install midi-writer-js
 ```
 -----
 
-### Quick Start
+### Try it Out
 <div id="editor">// Start with a new track
 var track = new MidiWriter.Track();
 
