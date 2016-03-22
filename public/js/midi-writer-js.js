@@ -87,7 +87,7 @@
 	MidiWriter.Track.prototype.setTempo = function(tempo) {
 		var event = new MidiWriter.MetaEvent({data: [MidiWriter.constants.META_TEMPO_ID]});
 		event.data.push(0x03); // Size
-		event.data = event.data.concat([0, 0, tempo]); // Tempo, 3 bytes
+		event.data = event.data.concat(MidiWriter.numberToBytes(tempo, 3)); // Tempo, 3 bytes
 		this.addEvent(event);
 	};
 
@@ -382,9 +382,16 @@
 
 		//** FOR DEMO ONLY **//
 		document.getElementById('download-midi').href = 'data:audio/midi;base64,' + this.base64();
-		document.getElementById('midi-check').style.visibility = 'visible';
+		var playButton = document.getElementById('play-button');
+		playButton.dataset.midi  = 'data:audio/midi;base64,' + this.base64();
+		playButton.style.visibility = 'visible';
 	};
 
+
+	/**
+	 * Builds the file into a Uint8Array
+	 * @returns Uint8Array
+	 */
 	MidiWriter.Writer.prototype.buildFile = function() {
 		var build = [];
 
@@ -395,7 +402,7 @@
 			build = build.concat(this.data[i].data);
 		}
 
-		return build;
+		return new Uint8Array(build);
 	};
 
 
@@ -411,6 +418,15 @@
 			return new Buffer(this.buildFile()).toString('base64');
 		}
 	};
+
+
+    /**
+     * Get the data URI.
+     * 
+     */
+    MidiWriter.Writer.prototype.dataUri = function() {
+        return 'data:audio/midi;base64,' + this.base64();
+    };
 
 
 	/**
@@ -504,6 +520,11 @@
 	};
 
 
+	/**
+	 * Convert a string to an array of bytes
+	 * @param {string}
+	 * @returns {array}
+	 */
 	MidiWriter.stringToBytes = function(string) {
 		var bytes = [];
 		for (var i = 0; i < string.length; i++) {
