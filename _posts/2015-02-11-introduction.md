@@ -18,7 +18,7 @@ var track = new MidiWriter.Track();
 track.addEvent(new MidiWriter.ProgramChangeEvent({instrument : 1}));
 
 // Add some notes:
-var note = new MidiWriter.NoteEvent({pitch:['C4', 'E4', 'G4'], duration: '4'});
+var note = new MidiWriter.NoteEvent({pitch:['C4', 'E4', 'G4'], duration: '4', sequential: true});
 track.addEvent(note);
 
 // Generate a data URI
