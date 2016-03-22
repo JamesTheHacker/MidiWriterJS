@@ -26,9 +26,9 @@ var write = new MidiWriter.Writer([track]);
 console.log('data:audio/midi;base64,' + write.base64());
 </div>
 <p>
-	<a class="button" href="javascript:;" onclick="document.getElementById('play-button').style.visibility='hidden';eval(editor.getValue());">Run</a>
-	<a href="javascript:;" class="button" id="download-midi">Download Midi</a>
-	<a href="javascript:;" data-midi="" id="play-button" style="visibility:hidden;color:#000000;" onclick="new MidiPlayer(this.dataset.midi).play();" title="play"><small>play &#8883;</small></a>
+	<a class="button" href="javascript:;" onclick="document.getElementById('download-midi').style.visibility='hidden';document.getElementById('play-button').style.visibility='hidden';eval(editor.getValue());">Generate MIDI</a>
+	<a href="javascript:;" class="button" id="download-midi" style="visibility:hidden;">Download Midi</a>
+	<a href="javascript:;" data-midi="" id="play-button" class="button" style="visibility:hidden;" onclick="new MidiPlayer(this.dataset.midi).play();">Play &#8883;</a>
 </p>
 <p>
 	<small style="font-size:11px;">Playback provided by <a href="https://github.com/chenx/MidiPlayer" target="_blank">MIDIPlayer</a></small>
