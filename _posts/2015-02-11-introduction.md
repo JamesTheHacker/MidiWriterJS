@@ -34,11 +34,11 @@ console.log('data:audio/midi;base64,' + write.base64());
 	<small style="font-size:11px;">Playback provided by <a href="https://github.com/chenx/MidiPlayer" target="_blank">MIDIPlayer</a></small>
 </p>
 
-<script src="{{ site.github.url }}/public/js/MIDIPlayer.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://grimmdude.github.io/MidiWriterJS/public/js/MIDIPlayer.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="{{ site.github.url }}/public/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="{{ site.github.url }}/public/js/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
-<script src="{{ site.github.url }}/public/js/midi-writer-js.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://grimmdude.github.io/MidiWriterJS/public/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://grimmdude.github.io/MidiWriterJS/public/js/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://grimmdude.github.io/MidiWriterJS/public/js/midi-writer-js.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
     var editor = ace.edit("editor");
