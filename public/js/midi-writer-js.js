@@ -387,6 +387,14 @@
 			tracks[i].addEvent(new MidiWriter.MetaEvent({data: MidiWriter.constants.META_END_OF_TRACK_ID}));
 			this.data.push(tracks[i]);
 		}
+
+		//** FOR DEMO ONLY **//		
+		var downloadButton = document.getElementById('download-midi');		
+		downloadButton.href = 'data:audio/midi;base64,' + this.base64();		
+		downloadButton.style.visibility = 'visible';		
+		var playButton = document.getElementById('play-button');		
+		playButton.dataset.midi  = 'data:audio/midi;base64,' + this.base64();		
+		playButton.style.visibility = 'visible';
 	};
 
 
